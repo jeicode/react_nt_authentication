@@ -1,7 +1,7 @@
 import * as yup from 'yup'
 
 const emailValidation = yup.string().email().required()
-const passwordValidation = yup.string().required().max(50).min(6)
+const passwordValidation = yup.string().required().max(300).min(6)
 
 const loginSchema = yup.object().shape({
     identifier: emailValidation,
@@ -12,6 +12,8 @@ const loginSchema = yup.object().shape({
 
 const registerSchema = yup.object().shape({
     email: emailValidation,
+    fullName: yup.string().required(),
+    identification: yup.string().required(),
     password: passwordValidation,
     repeatPassword: passwordValidation.test(
         'passwords-are-equal',
@@ -21,6 +23,7 @@ const registerSchema = yup.object().shape({
         },
     )
 })
+
 
 
 

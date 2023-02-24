@@ -29,8 +29,8 @@ function Form({navigation}) {
     const [extraErrors, setExtraErrors] = useState('');
 
     const initialValues = {
-        identifier: 'admin@gmail.com',
-        password: 'admin@gmail.com',
+        identifier: '',
+        password: '',
     }
 
     return (
