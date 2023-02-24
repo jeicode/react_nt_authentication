@@ -1,8 +1,8 @@
 
 
 export const ROUTES = {
-    LOGIN:'login',
-    REGISTER: 'register',
+    LOGIN_USER:'LOGIN',
+    REGISTER_USER: 'REGISTER',
     HOME: 'home',
     CREATE_BIRTHDAY:'createBirthday',
     DETAIL_BIRTHDAY: 'detailBirthday',
